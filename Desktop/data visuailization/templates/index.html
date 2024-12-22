@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Tool</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Upload Your Data to Generate a Graph</h1>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" accept=".csv, .xlsx" required />
+        <select id="graphType" required>
+            <option value="">Select Graph Type</option>
+            <option value="bar">Bar Graph</option>
+            <option value="line">Line Graph</option>
+            <option value="histogram">Histogram</option>
+        </select>
+        <button type="button" id="uploadBtn">Generate Graph</button>
+    </form>
+
+    <div id="graphPreview">
+        <!-- Loading spinner and graph will appear here -->
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
